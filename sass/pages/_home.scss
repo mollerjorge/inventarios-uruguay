@@ -1,0 +1,249 @@
+
+.intro {
+  position: relative;
+  padding: 15rem 5rem;
+
+  .intro-bg {
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: 60rem;
+  }
+
+  
+
+  .intro-title {
+    position: relative;
+
+    &:before {
+      display: inline-block;
+      content: '';
+      height: 12rem;
+      width: .6rem;
+      position: absolute;
+      left: -2rem;
+      background: $color-primary;
+    }
+  }
+}
+
+.services {
+  padding: 15rem 0;
+  margin-top: 10rem;
+  position: relative;
+
+  p {
+    color: $color-white;
+  }
+
+  &__main-title {
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__image-bg {
+    background: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9)), url('../img/services/managerWorker.jpg');
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+  }
+
+  &__intro {
+    border: .8rem solid $color-white;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    max-width: 40rem;
+    color: $color-white;
+    padding: 3rem;
+    transform: translate(-30%, -10%);
+    z-index: 10;
+  }
+
+  &__box {
+    background: $color-black-lighter;
+    height: 60vh;
+    padding: 10vh 5rem 10vh 15rem;
+
+  }
+
+  &__item {
+    display: flex;
+    padding: 2rem 0rem;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+    p {
+      color: $color-white;
+      font-size: 1.3rem;
+      font-weight: lighter;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    margin-bottom: 0rem;
+  }
+
+  &__icon {
+    img {
+      height: 5rem;
+    }
+  }
+}
+
+.about-us {
+  padding: 10rem 0;
+  
+
+  &__img-wrp {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+
+  &__image {
+    width: 100%;
+    clip-path: ellipse(92vh 23rem at 0px);
+  }
+
+  &__box {
+    padding: 0rem 5rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button {
+      width: 25rem;
+    }
+  }
+
+  &__title {
+    &:after {
+      content: '';
+      display: block;
+      width: 18%;
+      height: .5rem;
+      background: $color-primary;
+    }
+  }
+}
+
+.clients {
+  margin-top: 15rem;
+
+  &__title {
+    color: $color-white;
+    padding-top: 5rem;
+    margin-bottom: 0rem;
+    text-align: center;
+  }
+  
+  &__bg {
+    background: linear-gradient(rgba($color-primary, .3), rgba($color-primary, .3)), url('../img/clients/clients-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    
+  }
+
+  &__carousel {
+    padding-top: 10rem;
+    
+    .slick-dots {
+      bottom: -5rem;
+    }
+
+    .slick-dots li button:before {
+      font-size: 2rem;
+    }
+  }
+
+  &__carousel img{
+    width: auto;
+    margin: 0 auto; 
+    max-width: 15rem;
+  }
+
+}
+
+.contact {
+  @include respond(phone) {
+    padding: 5rem;
+  }
+  
+  position: relative;
+  background: $color-primary;
+  padding: 5rem 8rem;
+
+
+  &__title {
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 10rem;
+      height: .5rem;
+      background: $color-white;
+      margin: 0 auto;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+
+  &__icons-box {
+    display: flex;
+    align-items: center;
+    margin: 0rem 2rem 3rem 0rem;
+  }
+
+  &__icon{
+    color: $color-white;
+    font-size: 3.5rem;
+    margin-right: 1rem;
+  }
+
+  &__icon-legend {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  &__map-wrp {
+    border: .3rem solid $color-white;
+    padding: 1rem;
+    height: 50vh;
+  }
+
+  &__map {
+    height: 50vh;
+  }
+
+  &__spinner {
+    display: none;
+  }
+}
+

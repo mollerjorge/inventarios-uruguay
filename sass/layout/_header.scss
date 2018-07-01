@@ -1,0 +1,61 @@
+.header {
+  min-height: 100vh;
+  position: relative;
+
+  &__logo {
+    width: 30rem;
+  }
+
+  &__logo-box {
+    flex-basis: 30%;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translate(0%, -70%);
+    max-width: 55%;
+  }
+
+  &__text-box--servicios {
+    margin-left: 10rem;
+    h1,
+    h4 {
+      color: $color-white;
+    }
+
+    h1:after {
+      content: '';
+      display: block;
+      width: 20rem;
+      background: $color-white;
+      height: .3rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &__background {
+    clip-path: url(#myClip);
+    max-width: 100rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0%);
+    animation: arrowFloat 2s ease-in-out infinite;
+  }
+
+  &__arrow > img {
+    width: 5rem;
+  }
+
+  &--servicios {
+    background:  url("../img/services/backgroundServicios.jpg") center center fixed;
+    background-size: cover;
+    max-height: 50vh;
+    padding: 0 10rem;
+  }
+}

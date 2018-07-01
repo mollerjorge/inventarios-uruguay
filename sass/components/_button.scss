@@ -1,0 +1,63 @@
+.btn {
+  font-size: 1.4rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 10rem;
+  border: 0px;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  box-shadow: $button-box-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-.3rem);
+    background: $color-primary-lighter;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active,
+  &:visited {
+    transform: translateY(.3rem);
+    outline: none;
+    border: 0px;
+  }
+
+
+
+  &--arrow {
+    &:after {
+      content: url('../img/intro/arrowButton.svg');
+      width: 8rem;
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+  }
+
+  &--ghost {
+    background: transparent;
+  }
+  &--rounded {
+    border-radius: 10rem;
+  }
+  &--secondary {
+    border: .1rem solid $color-white;
+    color: $color-white;
+  }
+
+
+
+}

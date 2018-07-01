@@ -1,0 +1,37 @@
+.form {
+
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    color: $color-white;
+    font-size: 1.5rem;
+    flex-basis: 20%;
+    text-align: right;
+  }
+
+  &__control {
+    height: 2rem;
+    font-size: 1.5rem;
+    padding: 1.3rem 2rem;
+    
+    background: $color-white;
+    border: 0;
+    margin-left: 1rem;
+    flex-basis: 70%;
+    margin-left: 10%;
+    border-radius: .2rem;
+  }
+
+  &__textarea {
+    height: 20rem;
+  }
+
+
+  &--contact {
+    padding-right: 5rem;
+  }
+}
