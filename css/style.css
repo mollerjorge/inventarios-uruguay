@@ -1467,6 +1467,9 @@ p {
     flex-basis: 50%;
     justify-content: space-around;
     list-style: none; }
+    @media only screen and (min-width: 80em) {
+      .navigation__list {
+        flex-basis: 45%; } }
   .navigation__link {
     color: #FFF;
     font-size: 1.5rem;
