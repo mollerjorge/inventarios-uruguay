@@ -27,7 +27,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
       @media only screen and (max-width: 75em) { @content };    //1200px
   }
   @if $breakpoint == medium-desktop {
-      @media only screen and (min-width: 80em) { @content };    //1800
+      @media only screen and (min-width: 85em) { @content };    //1400
   }
   @if $breakpoint == big-desktop {
       @media only screen and (min-width: 112.5em) { @content };    //1800

@@ -5,19 +5,39 @@
   padding: 1rem 0rem;
 
   &__item {
+    @include respond(phone) {
+      margin-top: 2rem;
+
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+
     display: inline-block;
+    
   }
 
   &__list {
+    @include respond(phone) {
+      position: absolute;
+      top: 5rem;
+      flex-direction: column;
+      background: $color-primary;
+      width: 100%;
+      padding: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    @include respond(medium-desktop) {
+      flex-basis: 45%;
+    }
     align-items: center;
     display: flex;
     flex-basis: 50%;
     justify-content: space-around;
     list-style: none;
-
-    @include respond(medium-desktop) {
-      flex-basis: 45%;
-    }
   }
 
   &__link {
@@ -25,12 +45,15 @@
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     font-weight: 600;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   &__link:hover {
+    @include respond(phone) {
+      color: $color-white;
+    }
     color: $color-primary;
   }
 }

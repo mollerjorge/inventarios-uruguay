@@ -1,9 +1,37 @@
 (function($) {
+  $.fn.extend({
+    animateCss: function(animationName, callback) {
+      var animationEnd = (function(el) {
+        var animations = {
+          animation: 'animationend',
+          OAnimation: 'oAnimationEnd',
+          MozAnimation: 'mozAnimationEnd',
+          WebkitAnimation: 'webkitAnimationEnd',
+        };
+  
+        for (var t in animations) {
+          if (el.style[t] !== undefined) {
+            return animations[t];
+          }
+        }
+      })(document.createElement('div'));
+  
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+        //$(this).removeClass('animated ' + animationName);
+  
+        if (typeof callback === 'function') callback();
+      });
+  
+      return this;
+    },
+  });
   $(document).ready(function() {
     var isWoman = true;
 
     initCarousel();
     smoothScroll();
+    addAnimations();
+    $('.mobile-nav-icon').click(displayMenu);
     $(".form--contact").submit(submitForm);
 
     setInterval(function() {
@@ -152,5 +180,64 @@
           }
         });
     }
+
+    function addAnimations() {
+
+      $('.wp-header-text h1').addClass('animated fadeIn');
+      $('.wp-header-text h4').addClass('animated fadeIn');
+      
+      $('.wp-woman-men-work').waypoint(function(direction) {
+        $('.wp-woman-men-work').addClass('animated fadeInLeft');
+        $('.intro__text').addClass('animated fadeInRight');
+      }, {
+        offset: '20%'
+      });
+
+
+      $('.services__intro').waypoint(function() {
+        $('.services__intro').animateCss('fadeIn');
+      }, {offset: '30%'});
+
+      $('.wp-si-1').waypoint(function() {
+        
+        $('.wp-si-1').animateCss('fadeInRight', function() {
+          
+          $('.wp-si-2').animateCss('fadeInRight', function() {
+          
+            $('.wp-si-3').animateCss('fadeInRight');
+          });
+        });
+      },{ offset: '20%'});
+
+      $('.about-us').waypoint(function() {
+        $('.about-us__img-wrp').addClass('animated fadeInLeft');
+        $('.about-us__box').addClass('animated fadeInRight');
+      }, {offset: '20%'});
+
+
+      $('.ts1').waypoint(function() {
+        $('.ts1').addClass('animated fadeIn');
+      }, {offset: '50%'});
+      $('.ps1').waypoint(function() {
+        $('.ps1').addClass('animated fadeIn');
+      }, {offset: '50%'});
+      $('.ts2').waypoint(function() {
+        $('.ts2').addClass('animated fadeIn');
+      }, {offset: '50%'});
+      $('.ps2').waypoint(function() {
+        $('.ps2').addClass('animated fadeIn');
+      }, {offset: '50%'});
+    }
   });
+
+  function displayMenu() {
+    if ($('.navigation__list').hasClass('fadeIn')) {
+      $('.navigation__list').animateCss('fadeOut');
+      $('.navigation__list').removeClass('fadeIn');
+
+    } else {
+      $('.navigation__list').animateCss('fadeIn');
+      $('.navigation__list').removeClass('fadeOut');
+    }
+  }
 })(jQuery);

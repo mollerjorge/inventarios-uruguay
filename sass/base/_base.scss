@@ -1,5 +1,9 @@
 html {
 
+  @include respond(phone) {
+    font-size: 40%;
+  }
+
   @include respond(tab-land) {
     // width < 1200?
     font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
@@ -24,13 +28,7 @@ body {
   box-sizing: border-box;
   background: $color-background;
 
-  .header-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 75rem;
-    z-index: -1;
-  }
+  
 
   
 }

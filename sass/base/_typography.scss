@@ -31,8 +31,13 @@ p {
 }
 
 .title-servicios {
+  @include respond(phone) {
+    margin-top: 2rem;
+  }
+
   text-align: center;
   margin-top: 15rem;
+  opacity: 0;
 }
 
 .title-servicios:after {
@@ -45,4 +50,15 @@ p {
 }
 
 .paragraph-servicios {
+  @include respond(phone) {
+    padding: 0 4rem;
+    text-align: justify;
+    margin-bottom: 5rem;
+  }
+
+  opacity: 0;
+}
+
+.ts2 {
+  margin-top: 5rem;
 }

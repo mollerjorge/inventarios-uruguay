@@ -1,9 +1,21 @@
 .header {
+  @include respond(phone) {
+    padding: 0rem 2rem;
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url(../img/header/iUruguay2.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 7rem;
+  }
   min-height: 100vh;
   position: relative;
 
+
   &__logo {
-    width: 30rem;
+
+    @include respond(phone) {
+      width: 20rem;
+    }
+    width: 40rem;
   }
 
   &__logo-box {
@@ -11,14 +23,57 @@
   }
 
   &__text-box {
+    @include respond(phone) {
+      position: absolute;
+      top: 70%;
+      left: 0px;
+      transform: translate(0%, -70%);
+      max-width: 100%;
+      padding-left: 1.5rem;
+    }
+
     position: absolute;
     top: 70%;
     left: 0;
     transform: translate(0%, -70%);
     max-width: 55%;
+
+    h1,
+    h4 {
+      @include respond(phone) {
+        color: $color-white;
+      }
+
+      animation-duration: 2s;
+      animation-delay: 0.3s;
+    }
+  }
+
+  &-bg {
+    @include respond(phone) {
+      display: none !important;
+    }
+
+    @include respond(medium-desktop) {
+      width: 90rem;
+    }
+
+    @include respond(big-desktop) {
+      width: 100rem;
+    }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75rem;
+    z-index: -1;
   }
 
   &__text-box--servicios {
+    @include respond(phone) {
+      margin-left: 0rem;  
+    }
+
     margin-left: 10rem;
     h1,
     h4 {
@@ -26,11 +81,11 @@
     }
 
     h1:after {
-      content: '';
+      content: "";
       display: block;
       width: 20rem;
       background: $color-white;
-      height: .3rem;
+      height: 0.3rem;
       margin-top: 2rem;
     }
   }
@@ -53,9 +108,44 @@
   }
 
   &--servicios {
-    background:  url("../img/services/backgroundServicios.jpg") center center fixed;
+    @include respond(phone) {
+      background: linear-gradient(rgba($color-black, .4), rgba($color-black, .4)), url("../img/services/services-bg.jpg") center center fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0 2rem;
+    }
+
+    background: url("../img/services/backgroundServicios.jpg") center center fixed;
     background-size: cover;
     max-height: 50vh;
     padding: 0 10rem;
+
+    .mobile-nav-icon span {
+      background: $color-white;
+    }
   }
 }
+
+/* Mobile Navigation
+   =================================*/
+.mobile-nav-icon {
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  float: right;
+  width: 5rem;
+  height: 4rem;
+  cursor: pointer;
+  display: none;
+
+  span {
+    width: 4rem;
+    height: .5rem;
+    background: $color-primary;
+    border-radius: .4rem;
+  }
+}
+
