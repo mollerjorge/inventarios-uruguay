@@ -1555,6 +1555,9 @@ p {
     flex-basis: 50%;
     justify-content: space-around;
     list-style: none; }
+    @media screen and (min-width: 1366px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 768px) {
+      .navigation__list {
+        flex-basis: 47%; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__list {
         position: absolute;

@@ -18,6 +18,10 @@
   }
 
   &__list {
+    @media screen and (min-width: 1366px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 768px) {
+      flex-basis: 47%;
+    } 
+
     @include respond(phone) {
       position: absolute;
       top: 5rem;
