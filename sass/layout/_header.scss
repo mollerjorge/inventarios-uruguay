@@ -33,7 +33,7 @@
     }
 
     position: absolute;
-    top: 70%;
+    top: 85%;
     left: 0;
     transform: translate(0%, -70%);
     max-width: 55%;
@@ -115,7 +115,7 @@
       padding: 0 2rem;
     }
 
-    background: url("../img/services/backgroundServicios.jpg") center center fixed;
+    background:linear-gradient(rgba($color-black, .4), rgba($color-black, .4)), url("../img/services/managerWorker.jpg") center center fixed;
     background-size: cover;
     max-height: 50vh;
     padding: 0 10rem;

@@ -33,6 +33,9 @@
     addAnimations();
     $('.mobile-nav-icon').click(displayMenu);
     $(".form--contact").submit(submitForm);
+    $('.services__item-content').click(function() {
+      $(location).attr("href", window.location.href + 'servicios.html');
+    });
 
     setInterval(function() {
       var image = "";
@@ -113,7 +116,7 @@
           apiKey: "761bcfd7-1488-484c-8334-1ca26ae96409",
           subject: "Nueva consulta desde su formulario web",
           from: email,
-          to: "jmoller2106@gmail.com",
+          to: "info@inventariosuruguay.com",
           isTransactional: true,
           bodyHtml: htmlBody,
           encodingType: 4

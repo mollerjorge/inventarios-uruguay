@@ -35,7 +35,7 @@
     &:before {
       display: inline-block;
       content: '';
-      height: 12rem;
+      height: 6rem;
       width: .6rem;
       position: absolute;
       left: -2rem;
@@ -49,17 +49,14 @@
     padding: 0rem;
   }
 
-  padding: 15rem 0;
+  
   margin-top: 10rem;
   position: relative;
 
-  p {
-    color: $color-white;
-  }
-
   &__main-title {
-    color: $color-white;
+    color: $color-primary;
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__image-bg {
@@ -82,14 +79,12 @@
       transform: none;
     }
 
-    border: .8rem solid $color-white;
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    max-width: 40rem;
-    color: $color-white;
+    
+    
+    text-align: center;
+    color: $color-primary;
     padding: 3rem;
-    transform: translate(-30%, -10%);
+    
     z-index: 10;
     opacity: 0;
   }
@@ -116,7 +111,7 @@
 
 
     p {
-      color: $color-white;
+      color: $color-primary;
       font-size: 1.3rem;
       font-weight: lighter;
     }
@@ -140,11 +135,142 @@
   &__description {
     margin-left: 2rem;
   }
+
+  /* Service Item */
+  &__item-img {
+    background: url('../img/services/serviceMockup.jpg') center center;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+  }
+
+  &__item-wrp {
+    padding: 5rem;
+    
+    
+  }
+
+  &__item-content {
+    box-shadow: .4rem .4rem 0.9rem 0.5rem rgba(0, 0, 0, 0.3);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__item-arrow {
+    background: url(../img/services/arrow.png) center center;
+    background-size: cover;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    h2 {
+      color: $color-white;
+      margin: 0;
+      margin: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__item-desc {
+    background: $color-white;
+    padding: 2rem;
+
+    ul {
+      list-style: none;
+      font-size: 1.8rem;
+      color: $color-black-lighter;
+
+      li {
+        margin-top: 2rem;
+        padding: 1rem 0;
+      }
+
+      li:before {
+        background: url('../img/services/check-box.svg') center center;
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 2rem;
+        content: "";
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+  }
 }
 
 .about-us {
   padding: 10rem 0;
   
+  &__logo {
+    @include respond(phone) {
+      display: none;
+    }
+
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32rem;
+    left: 50%;
+  }
+
+  &__mision {
+    @include respond(phone) {
+      border-right: 0px solid transparent;  
+      width: inherit;
+    }
+
+    border-bottom: 300px solid $color-primary;
+    border-left: 0px solid transparent;
+    border-right: 90px solid transparent;
+    height: 0px;
+    width: 60%;
+    text-align: center;
+    padding: 2rem;
+
+    h2,p{
+      color: $color-white;      
+    }
+
+    p {
+      @include respond(phone) {
+        font-size: 2.1rem;
+      }
+      font-size: 1.8rem;
+    }
+  }
+
+
+  &__vision {
+    @include respond(phone) {
+      border-left: 0px solid transparent;  
+      width: inherit;
+    }
+
+    border-bottom: 300px solid $color-primary;
+    border-left: 90px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0px;
+    width: 60%;
+    text-align: center;
+    padding: 2rem;
+
+    h2,p{
+      color: $color-white;
+    }
+
+    p {
+      @include respond(phone) {
+        font-size: 2.1rem;
+      }
+      font-size: 1.8rem;
+    }
+  }
 
   &__img-wrp {
 
@@ -162,6 +288,10 @@
   }
 
   &__image {
+    @include respond(big-desktop) {
+      clip-path: ellipse(87vh 23rem at 0px);
+    }
+
     width: 100%;
     clip-path: ellipse(92vh 23rem at 0px);
   }
@@ -179,7 +309,7 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     opacity: 0;
     
     button {
@@ -193,7 +323,14 @@
   }
 
   &__title {
+    @include respond(phone) {
+      color: $color-white;
+    }
+
     &:after {
+      @include respond(phone) {
+        background: $color-white;
+      }
       content: '';
       display: block;
       width: 18%;
@@ -219,6 +356,7 @@
     padding-top: 5rem;
     margin-bottom: 0rem;
     text-align: center;
+    visibility: hidden;
   }
   
   &__bg {
