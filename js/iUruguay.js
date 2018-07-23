@@ -37,22 +37,19 @@
       $(location).attr("href", window.location.href + 'servicios.html');
     });
 
-    setInterval(function() {
-      var image = "";
-      $(".header-bg").fadeOut(1000, function() {
-        isWoman = !isWoman;
-
-        if (isWoman) {
-          image = "womanClipped.png";
-        } else {
-          image = "menClipped.png";
+    $('.owl-carousel').owlCarousel({
+      margin:10,
+      nav:true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
         }
-
-        $(".header-bg")
-          .attr("src", "img/header/" + image)
-          .fadeIn(1000);
-      });
-    }, 8000);
+      }
+    })
 
     function initCarousel() {
       if ($(".clients__carousel").length) {
