@@ -1,69 +1,77 @@
 body.servicios {
+  .header {
+    background: $color-white;
+    height: 80vh;
+    min-height: 80vh;
+  }
 
-	.header {
-		background: $color-white;
-		height: 80vh;
-		min-height: 80vh;
-	}
+  .service {
+    &__main-img {
+      padding: 5rem 2rem 5rem 5rem;
+    }
 
-	.service {
-		&__main-img {
-			padding: 5rem 2rem 5rem 5rem;
-		}
+    &__text-wrp {
+      padding: 1rem 3rem 1rem 0rem;
+    }
+  }
 
-		&__text-wrp {
-			padding: 1rem 3rem 1rem 0rem;
-		}
-	}
+  .service-features {
+    padding: 1rem 5rem;
+    background: #f7f7f7;
 
-	.service-features {
-		padding: 1rem 5rem;
-		background: #f7f7f7;
+    ul {
+      list-style: none;
 
-		ul {
-			list-style: none;
-
-			li:before {
-				content: "";
-				background:  url('../img/services/check-box.png');
-				background-size: 15px;
-				display: inline-block;
-				width: 15px;
-				height: 15px;
+      li:before {
+        content: "";
+        background: url("../img/services/check-box.png");
+        background-size: 15px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+			}
+			
+			li {
+				margin-bottom: 1.3rem;
 			}
 
-			p {
-				display: inline-block;
-				margin-left: 2rem;
-			}
-		}
-	}
+      p {
+        display: inline;
+        margin-left: 2rem;
+      }
+    }
+  }
 
-	.bottom-text {
-		background: $color-primary;
-		padding: 2rem 10rem;
-		h2,p {
-			text-align: center;
-			color: $color-white;
-		}
-		p {
-			max-width: 80%;
-			margin: 0 auto;
-		}
+  .bottom-text {
+    background: $color-primary;
+    padding: 2rem 10rem;
+    h2,
+    p {
+      text-align: center;
+      color: $color-white;
+    }
+    p {
+      max-width: 80%;
+      margin: 0 auto;
+    }
 
-
-
-		.icon-wrp {
+		.service-icon {
 			display: flex;
-
-			p {
-				margin-left: 2rem;
-			}
+			justify-content: center;
+			height: 100%;
+			align-items: center;
 		}
 
-		.columns.icons {
-			margin-top: 3rem;
-		}
-	}
+    .icon-wrp {
+      display: flex;
+
+      p {
+        margin-left: 2rem;
+      }
+    }
+
+    .columns.icons {
+      margin-top: 3rem;
+    }
+  }
 }
-
