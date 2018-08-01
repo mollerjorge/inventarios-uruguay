@@ -3,6 +3,11 @@ body.servicios {
     background: $color-white;
     height: 80vh;
     min-height: 80vh;
+
+    @include respond(phone) {
+      height: unset;
+      min-height: unset;
+    }
   }
 
   .service {
@@ -11,6 +16,9 @@ body.servicios {
     }
 
     &__text-wrp {
+      @include respond(phone) {
+        padding: 1rem 3rem;
+      }
       padding: 1rem 3rem 1rem 0rem;
     }
   }
@@ -20,7 +28,12 @@ body.servicios {
     background: #f7f7f7;
 
     ul {
+      
       list-style: none;
+
+      @include respond(phone) {
+        padding: 0;
+      }
 
       li:before {
         content: "";
@@ -45,6 +58,11 @@ body.servicios {
   .bottom-text {
     background: $color-primary;
     padding: 2rem 10rem;
+
+    @include respond(phone) {
+      padding: 2rem 0rem;
+    }
+
     h2,
     p {
       text-align: center;

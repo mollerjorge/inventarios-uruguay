@@ -1431,70 +1431,71 @@ p {
   color: black;
   font-weight: 600; }
 
-.header {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/header/mujerDeposito.png) center center;
+.header__logo {
+  width: 30rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__logo {
+      width: 24rem; } }
+
+.header__logo-box {
+  display: flex;
+  flex-basis: 30%; }
+
+.header__text-box {
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  transform: translate(-10%, -75%);
+  max-width: 55%; }
+  .header__text-box h1,
+  .header__text-box h4 {
+    color: #FFF;
+    animation-duration: 2s;
+    animation-delay: 0.3s; }
+
+.header__text-box--servicios {
+  margin-left: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__text-box--servicios {
+      margin-left: 0rem; } }
+  .header__text-box--servicios h1,
+  .header__text-box--servicios h4 {
+    color: #FFF; }
+  .header__text-box--servicios h1:after {
+    content: "";
+    display: block;
+    width: 20rem;
+    background: #FFF;
+    height: 0.3rem;
+    margin-top: 2rem; }
+
+.header__background {
+  clip-path: url(#myClip);
+  max-width: 100rem; }
+
+.header__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0%);
+  animation: arrowFloat 2s ease-in-out infinite; }
+
+.header__arrow > img {
+  width: 5rem; }
+
+.header--servicios {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/services/managerWorker.jpg") center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
-  position: relative; }
-  .header__logo {
-    width: 30rem; }
-    @media only screen and (max-width: 37.5em) {
-      .header__logo {
-        width: 20rem; } }
-  .header__logo-box {
-    display: flex;
-    flex-basis: 30%; }
-  .header__text-box {
-    position: absolute;
-    top: 75%;
-    left: 10%;
-    transform: translate(-10%, -75%);
-    max-width: 55%; }
-    .header__text-box h1,
-    .header__text-box h4 {
-      color: #FFF;
-      animation-duration: 2s;
-      animation-delay: 0.3s; }
-  .header__text-box--servicios {
-    margin-left: 10rem; }
-    @media only screen and (max-width: 37.5em) {
-      .header__text-box--servicios {
-        margin-left: 0rem; } }
-    .header__text-box--servicios h1,
-    .header__text-box--servicios h4 {
-      color: #FFF; }
-    .header__text-box--servicios h1:after {
-      content: "";
-      display: block;
-      width: 20rem;
-      background: #FFF;
-      height: 0.3rem;
-      margin-top: 2rem; }
-  .header__background {
-    clip-path: url(#myClip);
-    max-width: 100rem; }
-  .header__arrow {
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translate(-50%, 0%);
-    animation: arrowFloat 2s ease-in-out infinite; }
-  .header__arrow > img {
-    width: 5rem; }
-  .header--servicios {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/services/managerWorker.jpg") center center fixed;
-    background-size: cover;
-    max-height: 50vh;
-    padding: 0 10rem; }
-    @media only screen and (max-width: 37.5em) {
-      .header--servicios {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/services/services-bg.jpg") center center fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 0 2rem; } }
-    .header--servicios .mobile-nav-icon span {
-      background: #FFF; }
+  max-height: 50vh;
+  padding: 0 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header--servicios {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/services/services-bg.jpg") center center fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0 2rem; } }
+  .header--servicios .mobile-nav-icon span {
+    background: #FFF; }
 
 /* Mobile Navigation
    =================================*/
@@ -1508,7 +1509,8 @@ p {
     .mobile-nav-icon {
       display: flex;
       flex-direction: column;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      margin-top: 2rem; } }
   .mobile-nav-icon span {
     width: 4rem;
     height: .5rem;
@@ -1549,7 +1551,7 @@ p {
     @media only screen and (max-width: 37.5em) {
       .navigation__list {
         position: absolute;
-        top: 5rem;
+        top: 8rem;
         flex-direction: column;
         background: #2C3777;
         width: 100%;
@@ -1568,6 +1570,9 @@ p {
     letter-spacing: 0.05rem;
     font-weight: 600;
     transition: all 0.3s ease-in-out; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__link {
+        color: #FFF; } }
   .navigation__link:hover {
     color: #2C3777; }
     @media only screen and (max-width: 37.5em) {
@@ -1649,6 +1654,12 @@ p {
   .notification.animated {
     visibility: visible; }
 
+@media only screen and (max-width: 37.5em) {
+  .home article > h1 {
+    font-size: 3rem;
+    width: 30rem !important;
+    line-height: 3rem; } }
+
 .intro {
   position: relative; }
   .intro__bg {
@@ -1669,7 +1680,7 @@ p {
       bottom: -37%;
       right: -29%;
       width: 50rem;
-      opacity: .1; }
+      opacity: 0.1; }
   .intro .intro-title {
     position: relative; }
     .intro .intro-title:before {
@@ -1697,7 +1708,7 @@ p {
     position: relative;
     height: 20rem; }
   .services__image-bg-2 {
-    background: url("../img/services/bienesCambio.jpg");
+    background: url("../img/services/supermercado5.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1710,15 +1721,26 @@ p {
     background-repeat: no-repeat;
     position: relative;
     height: 20rem; }
+  .services__image-bg-4 {
+    background: url("../img/services/otros.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 20rem; }
   .services__wrp {
     background: #FFF;
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.12);
-    border-radius: .3rem;
-    overflow: hidden; }
+    border-radius: 0.3rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; }
     .services__wrp p {
       margin-top: 0rem;
       color: #6F6F6F;
       padding: 0rem 2rem; }
+    .services__wrp:hover {
+      transform: scale(1.03);
+      cursor: pointer; }
   .services__text {
     padding: 0rem 2rem;
     display: flex; }
@@ -1726,15 +1748,20 @@ p {
       width: 3rem !important; }
     .services__text h3 {
       margin-left: 2rem; }
-  .services .owl-carousel .owl-nav button.owl-next, .services .owl-carousel .owl-nav button.owl-prev, .services .owl-carousel button.owl-dot {
+  .services .owl-carousel .owl-nav button.owl-next,
+  .services .owl-carousel .owl-nav button.owl-prev,
+  .services .owl-carousel button.owl-dot {
     padding: 1rem 3rem !important;
-    background: #FFF;
-    box-shadow: 5px 10px 20px rgba(50, 50, 50, 0.12);
     font-size: 4rem; }
-  .services .owl-carousel .owl-nav button.owl-next:focus, .services .owl-carousel .owl-nav button.owl-prev:focus, .services .owl-carousel button.owl-dot:focus {
+  .services .owl-carousel .owl-nav button.owl-next:focus,
+  .services .owl-carousel .owl-nav button.owl-prev:focus,
+  .services .owl-carousel button.owl-dot:focus {
     outline: none; }
-  .services .owl-theme .owl-nav [class*='owl-']:hover {
-    color: #000; }
+  .services .owl-theme .owl-nav [class*="owl-"]:hover {
+    background: transparent !important; }
+  .services .owl-theme .owl-nav [class*="owl-"]:hover {
+    color: #17215F;
+    text-decoration: none; }
   .services__intro {
     text-align: center;
     color: #2C3777;
@@ -1767,7 +1794,7 @@ p {
       font-weight: lighter; }
 
 .about-us {
-  padding: 10rem 0; }
+  margin-top: 5rem; }
   @media only screen and (max-width: 37.5em) {
     .about-us .columns {
       background: #2C3777; }
@@ -1832,7 +1859,7 @@ p {
     flex-direction: column;
     justify-items: center;
     justify-content: center;
-    opacity: 0; }
+    opacity: 1; }
     @media only screen and (max-width: 37.5em) {
       .about-us__img-wrp {
         display: none; } }
@@ -1847,19 +1874,17 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
     height: 100%; }
     @media only screen and (max-width: 37.5em) {
       .about-us__box {
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/about-us/office.png") center center fixed;
         background-repeat: no-repeat; } }
-    .about-us__box h2, .about-us__box p {
-      color: #FFF; }
+    .about-us__box h2,
     .about-us__box p {
-      width: 80%; }
-      @media only screen and (max-width: 37.5em) {
-        .about-us__box p {
-          width: 100%; } }
+      color: #FFF; }
+    @media only screen and (max-width: 37.5em) {
+      .about-us__box p {
+        width: 100%; } }
     .about-us__box h2 {
       margin-bottom: 0rem; }
     .about-us__box button {
@@ -1886,7 +1911,7 @@ p {
       color: #FFF; } }
 
 .clients {
-  margin-top: 15rem; }
+  margin-top: -3.2rem; }
   .clients__title {
     color: #FFF;
     padding-top: 5rem;
@@ -1953,8 +1978,7 @@ p {
     color: white; }
   .contact__map-wrp {
     border: 0.3rem solid #FFF;
-    padding: 1rem;
-    height: 50vh; }
+    padding: 1rem; }
   .contact__map {
     height: 50vh; }
   .contact__spinner {
@@ -1964,18 +1988,28 @@ body.servicios .header {
   background: #FFF;
   height: 80vh;
   min-height: 80vh; }
+  @media only screen and (max-width: 37.5em) {
+    body.servicios .header {
+      height: unset;
+      min-height: unset; } }
 
 body.servicios .service__main-img {
   padding: 5rem 2rem 5rem 5rem; }
 
 body.servicios .service__text-wrp {
   padding: 1rem 3rem 1rem 0rem; }
+  @media only screen and (max-width: 37.5em) {
+    body.servicios .service__text-wrp {
+      padding: 1rem 3rem; } }
 
 body.servicios .service-features {
   padding: 1rem 5rem;
   background: #f7f7f7; }
   body.servicios .service-features ul {
     list-style: none; }
+    @media only screen and (max-width: 37.5em) {
+      body.servicios .service-features ul {
+        padding: 0; } }
     body.servicios .service-features ul li:before {
       content: "";
       background: url("../img/services/check-box.png");
@@ -1992,6 +2026,9 @@ body.servicios .service-features {
 body.servicios .bottom-text {
   background: #2C3777;
   padding: 2rem 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    body.servicios .bottom-text {
+      padding: 2rem 0rem; } }
   body.servicios .bottom-text h2,
   body.servicios .bottom-text p {
     text-align: center;

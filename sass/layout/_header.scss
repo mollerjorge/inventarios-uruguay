@@ -1,13 +1,9 @@
 .header {
-  background: linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)), url(../img/header/mujerDeposito.png) center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    position: relative;
+  
   &__logo {
 
     @include respond(phone) {
-      width: 20rem;
+      width: 24rem;
     }
     width: 30rem;
   }
@@ -98,6 +94,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 2rem;
   }
 
   float: right;

@@ -25,12 +25,31 @@
       return this;
     },
   });
+
+  $('.services__wrp.fisicos').click(function(){
+    redirect('fisicos.html');
+  });
+  $('.services__wrp.bienesCambio').click(function(){
+    redirect('bienesDeCambio.html');
+  });
+  $('.services__wrp.consultoria').click(function(){
+    redirect('consultoria.html');
+  });
+  $('.services__wrp.otros').click(function(){
+    redirect('otrosServicios.html');
+  });
+
+  function redirect(url) {
+    var href = window.location.href.split('/');
+    href = href[0] + "//" + href[2] + '/';
+    $(location).attr('href',href+url);
+  }
   $(document).ready(function() {
     var isWoman = true;
 
     initCarousel();
     smoothScroll();
-    addAnimations();
+    //addAnimations();
     $('.mobile-nav-icon').click(displayMenu);
     $(".form--contact").submit(submitForm);
     $('.services__item-content').click(function() {
