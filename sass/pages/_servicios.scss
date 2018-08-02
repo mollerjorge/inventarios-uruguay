@@ -63,9 +63,12 @@ body.servicios {
       padding: 2rem 0rem;
     }
 
-    h2,
-    p {
+    h2{
       text-align: center;
+      color: $color-white;
+    }
+    p {
+      text-align: justify;
       color: $color-white;
     }
     p {
