@@ -40,8 +40,7 @@
   });
 
   function redirect(url) {
-    var href = window.location.href.split('/');
-    href = href[0] + "//" + href[2] + '/';
+    var href = window.location.href;
     $(location).attr('href',href+url);
   }
   $(document).ready(function() {
