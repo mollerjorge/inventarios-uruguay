@@ -130,8 +130,6 @@
     }
   }
 
-  
-
   .owl-carousel .owl-nav button.owl-next,
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel button.owl-dot {
@@ -196,7 +194,7 @@
 }
 
 .about-us {
-  margin-top: 5rem;
+  margin-top: 6rem;
 
   @include respond(phone) {
     .columns {
@@ -419,7 +417,7 @@
 
   position: relative;
   background: $color-primary;
-  padding: 5rem 8rem;
+  padding: 5rem 8rem 0rem 8rem;
 
   &__title {
     color: $color-white;
@@ -467,14 +465,27 @@
   }
 
   &__map {
-    height: 50vh;
+    height: 65vh;
   }
 
   &__spinner {
     display: none;
   }
-
-  
 }
 
- 
+.wwu {
+  &__wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-primary;
+    height: 20vh;
+    a {
+      flex-basis: 30%;
+      margin: 2.5rem 3rem;
+    }
+    h2 {
+      color: $color-white;
+    }
+  }
+}

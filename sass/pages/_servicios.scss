@@ -63,6 +63,18 @@ body.servicios {
       padding: 2rem 0rem;
     }
 
+    ul {
+      color: white;
+      padding: 0;
+    }
+
+    .columns:nth-child(2) p {
+      text-align: unset;
+      width: 100%;
+      max-width: 100%;
+      margin-left: 3rem !important;
+    }
+
     h2{
       text-align: center;
       color: $color-white;
@@ -70,9 +82,10 @@ body.servicios {
     p {
       text-align: justify;
       color: $color-white;
+      margin: unset !important;
     }
     p {
-      max-width: 80%;
+      max-width: 100%;
       margin: 0 auto;
     }
 

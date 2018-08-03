@@ -1593,7 +1593,7 @@ p {
 .form__control {
   height: 2rem;
   font-size: 1.5rem;
-  padding: 1.3rem 2rem;
+  padding: 2rem 2rem;
   background: #FFF;
   border: 0;
   margin-left: 1rem;
@@ -1701,7 +1701,7 @@ p {
     text-transform: uppercase;
     text-align: center; }
   .services__image-bg-1 {
-    background: url("../img/services/hombreTrabajandoConPos.jpg");
+    background: url("../img/services/fisicos4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1794,7 +1794,7 @@ p {
       font-weight: lighter; }
 
 .about-us {
-  margin-top: 5rem; }
+  margin-top: 6rem; }
   @media only screen and (max-width: 37.5em) {
     .about-us .columns {
       background: #2C3777; }
@@ -1944,7 +1944,7 @@ p {
 .contact {
   position: relative;
   background: #2C3777;
-  padding: 5rem 8rem; }
+  padding: 5rem 8rem 0rem 8rem; }
   @media only screen and (max-width: 37.5em) {
     .contact {
       padding: 2rem; } }
@@ -1980,9 +1980,21 @@ p {
     border: 0.3rem solid #FFF;
     padding: 1rem; }
   .contact__map {
-    height: 50vh; }
+    height: 65vh; }
   .contact__spinner {
     display: none; }
+
+.wwu__wrp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2C3777;
+  height: 20vh; }
+  .wwu__wrp a {
+    flex-basis: 30%;
+    margin: 2.5rem 3rem; }
+  .wwu__wrp h2 {
+    color: #FFF; }
 
 body.servicios .header {
   background: #FFF;
@@ -2029,12 +2041,23 @@ body.servicios .bottom-text {
   @media only screen and (max-width: 37.5em) {
     body.servicios .bottom-text {
       padding: 2rem 0rem; } }
-  body.servicios .bottom-text h2,
-  body.servicios .bottom-text p {
+  body.servicios .bottom-text ul {
+    color: white;
+    padding: 0; }
+  body.servicios .bottom-text .columns:nth-child(2) p {
+    text-align: unset;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 3rem !important; }
+  body.servicios .bottom-text h2 {
     text-align: center;
     color: #FFF; }
   body.servicios .bottom-text p {
-    max-width: 80%;
+    text-align: justify;
+    color: #FFF;
+    margin: unset !important; }
+  body.servicios .bottom-text p {
+    max-width: 100%;
     margin: 0 auto; }
   body.servicios .bottom-text .service-icon {
     display: flex;
